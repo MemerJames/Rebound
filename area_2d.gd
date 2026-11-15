@@ -67,11 +67,16 @@ func _process(delta: float) -> void:
 	velocity.y += gravity * delta
 	position += velocity * delta
 	
+	
+	
 	var hits := get_overlapping_areas()
 	if not hits.is_empty():
 		print("OVERLAPPING RIGHT NOW WITH: ", hits)
 	
-func _on_area_entered(area: Area2D) -> void:
-	print("PLAYER TOUCHED: ", area.name)	
-	area.get_parent().queue_free()
+func _physics_process(_delta: float) -> void:
+	# Check for any overlapping collectible items every physics frame
+	for area in get_overlapping_areas():
+		var item := area.get_parent()
+		if item.is_in_group("collectible"):
+			item.collect(self) 
 	
