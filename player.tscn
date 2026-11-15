@@ -1,10 +1,23 @@
 [gd_scene format=3 uid="uid://cisd4joxypi0y"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_32gta"]
+[ext_resource type="Script" uid="uid://bjsla11aoo1fj" path="res://area_2d.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://b17b33hpa7mm3" path="res://[assets] REBOUND/Bear - purple.png" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(662.50024, 942.50037)
 
 [node name="player" type="Area2D" unique_id=651152652]
+scale = Vector2(0.05, 0.05)
+gravity_space_override = 3
+gravity = 900.0
+script = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1896200225]
+position = Vector2(17.49994, -17.50016)
+scale = Vector2(1.9999988, 1.9999988)
+shape = SubResource("RectangleShape2D_ig7tw")
+disabled = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1499453252]
-sprite_frames = SubResource("SpriteFrames_32gta")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=533657440]
+position = Vector2(9.999999, -4.9999995)
+texture = ExtResource("2_onrkg")

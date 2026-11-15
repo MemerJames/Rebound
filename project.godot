@@ -14,6 +14,7 @@ config/name="Rebound"
 run/main_scene="uid://cdtmknb4g17m4"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="uid://cdtmknb4g17m4"
 
 [display]
 
