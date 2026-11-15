@@ -1,32 +1,75 @@
-<<<<<<< HEAD
-[gd_scene format=3 uid="uid://dq43yksqbfdxl"]
-
-[node name="Node2D" type="Node2D" unique_id=1472564152]
-=======
 [gd_scene format=3 uid="uid://cs0eq464p1wfl"]
 
 [ext_resource type="Script" uid="uid://b0v6i2bocaoc2" path="res://cam.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dw5taqm5580l6" path="res://[assets] REBOUND/empty-food.png" id="1_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dda56fcaibaxk" path="res://[assets] REBOUND/empty heart.png" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cisd4joxypi0y" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://qxeepr5kwu3n" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bs2b883hr0hu8" path="res://energy.tscn" id="2_kek77"]
+[ext_resource type="PackedScene" uid="uid://bp5hdg2j3yyu3" path="res://Mini Bear.tscn" id="3_4c57u"]
+[ext_resource type="PackedScene" uid="uid://c12eqddjb3oad" path="res://hearts.tscn" id="4_efxa6"]
+[ext_resource type="PackedScene" uid="uid://otghfut6pqsf" path="res://food.tscn" id="5_dg77c"]
 
-[node name="Main" type="Node2D" unique_id=2132303042]
+[node name="Main" type="Node2D" unique_id=2132303042 node_paths=PackedStringArray("camera", "player")]
+script = ExtResource("1_lquwl")
+items = Array[PackedScene]([ExtResource("2_kek77"), ExtResource("3_4c57u"), ExtResource("4_efxa6"), ExtResource("5_dg77c")])
+camera = NodePath("cam")
+player = NodePath("player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=909286292]
 layer = -10
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1140646017]
-<<<<<<< HEAD
-offset_left = -772.0
-offset_top = -658.0
-offset_right = 766.0
-offset_bottom = 682.0
->>>>>>> a89bab63727e0201d67b46b3ee066aa7c7b4e714
-=======
 offset_left = -117.0
 offset_top = -199.0
 offset_right = 1421.0
 offset_bottom = 1141.0
 color = Color(0.37254903, 0.44313726, 0.9137255, 1)
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer" unique_id=298054376]
+anchors_preset = -1
+anchor_left = -7.827
+anchor_top = -7.4950004
+anchor_right = -7.827
+anchor_bottom = -7.4950004
+offset_left = 10844.561
+offset_top = 5994.4004
+offset_right = 10943.561
+offset_bottom = 6093.4004
+texture = ExtResource("1_1bvp3")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer" unique_id=171142343]
+offset_left = 1081.0
+offset_top = 601.0
+offset_right = 1180.0
+offset_bottom = 700.0
+texture = ExtResource("1_1bvp3")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer" unique_id=315103217]
+offset_left = 996.0
+offset_top = 600.0
+offset_right = 1095.0
+offset_bottom = 699.0
+texture = ExtResource("1_1bvp3")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=1546269597]
+offset_left = 913.0
+offset_top = 599.0
+offset_right = 1012.0
+offset_bottom = 698.0
+texture = ExtResource("1_1bvp3")
+expand_mode = 1
+
+[node name="hunger 1" type="TextureRect" parent="CanvasLayer" unique_id=112148814]
+offset_left = 1160.0
+offset_top = 602.0
+offset_right = 1259.0
+offset_bottom = 701.0
+texture = ExtResource("1_1bvp3")
+expand_mode = 1
 
 [node name="heart 1" type="TextureRect" parent="CanvasLayer" unique_id=166801124]
 anchors_preset = -1
@@ -90,4 +133,3 @@ player = NodePath("../player")
 
 [node name="player" parent="." unique_id=651152652 instance=ExtResource("1_ig7tw")]
 position = Vector2(-223.99998, -164.99998)
->>>>>>> 1b10fea601c84928aa5ff9e76358fc7d03693612

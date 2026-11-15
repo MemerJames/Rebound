@@ -1,9 +1,6 @@
-extends Area2D
+extends Node2D
 
 # variables
-var max_hunger = 5
-
-@export var player: Area2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,5 +14,5 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.name == "player":
-		area.hunger = min(player.hunger + 1, max_hunger)
+		area.speedMultiplier = 1.5
 		queue_free()

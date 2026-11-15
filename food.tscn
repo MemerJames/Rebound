@@ -1,41 +1,21 @@
 [gd_scene format=3 uid="uid://otghfut6pqsf"]
 
 [ext_resource type="Texture2D" uid="uid://bcej5pvmpc6pb" path="res://[assets] REBOUND/Currency - Food.png" id="1_8txok"]
-
-[sub_resource type="GDScript" id="GDScript_l35wh"]
-resource_name = "res://Currencies/food.gd"
-script/source = "extends Area2D
-
-# variables
-var max_hunger = 5
-
-@export var player: Area2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func _on_area_entered(area: Area2D) -> void:
-	if area.name == \"player\":
-		area.hunger = min(area.hunger + 1, max_hunger)
-		queue_free()
-"
+[ext_resource type="Script" uid="uid://6mm2375mwb7o" path="res://food.gd" id="1_pohk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l35wh"]
+size = Vector2(56, 43)
 
 [node name="Food" type="Node2D" unique_id=1932214062]
-script = SubResource("GDScript_l35wh")
+script = ExtResource("1_pohk7")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2082042707]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=310008868]
+position = Vector2(7, 6.5)
 shape = SubResource("RectangleShape2D_l35wh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=913568762]
+position = Vector2(5.999998, 4.9999924)
+scale = Vector2(0.051499996, 0.051499996)
 texture = ExtResource("1_8txok")

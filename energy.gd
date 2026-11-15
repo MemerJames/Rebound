@@ -1,8 +1,4 @@
-extends Area2D
-
-# variables
-var max_hearts = 5
-
+extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,6 +10,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_area_entered(area: Area2D) -> void:
+	print("COLLISION DETECTED WITH: ", area.name)
 	if area.name == "player":
-		area.health = min(area.health + 1, max_hearts)
+		area.speedMultiplier = 1.5
 		queue_free()

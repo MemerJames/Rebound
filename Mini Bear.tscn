@@ -1,42 +1,22 @@
 [gd_scene format=3 uid="uid://bp5hdg2j3yyu3"]
 
+[ext_resource type="Script" uid="uid://b7v0qt1pgwxqc" path="res://mini_bear.gd" id="1_6xxpl"]
 [ext_resource type="Texture2D" uid="uid://bnu47wl08vqso" path="res://[assets] REBOUND/Currency - Mini Bear.png" id="1_yxer6"]
 
-[sub_resource type="GDScript" id="GDScript_l35wh"]
-resource_name = "res://Currencies/mini_bear.gd"
-script/source = "extends Area2D
-
-# variables
-var max_hearts = 6
-var max_hunger = 6
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func _on_area_entered(area: Area2D) -> void:
-	if area.name == \"player\":
-		area.hunger = max_hunger
-		area.health = max_hearts
-		#area.speed = area.speed * 3
-		queue_free()
-"
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l35wh"]
+size = Vector2(74.56251, 81.9375)
 
 [node name="MiniBear" type="Node2D" unique_id=842568066]
-script = SubResource("GDScript_l35wh")
+position = Vector2(-17, 9)
+script = ExtResource("1_6xxpl")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=299719672]
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1353801357]
-texture = ExtResource("1_yxer6")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1260394999]
+position = Vector2(14.718746, -12.03125)
 shape = SubResource("RectangleShape2D_l35wh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1353801357]
+position = Vector2(17.5, -9.749978)
+scale = Vector2(0.049499996, 0.049499996)
+texture = ExtResource("1_yxer6")

@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 # variables
 var max_hearts = 6
@@ -18,5 +18,5 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.name == "player":
 		area.hunger = max_hunger
 		area.health = max_hearts
-		#area.speed = area.speed * 3
+		area.speedMulitplier = 1.5
 		queue_free()

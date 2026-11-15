@@ -1,6 +1,4 @@
-extends Area2D
-
-# variables
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -14,5 +12,4 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.name == "player":
-		#area.speed = area.speed * 3
 		queue_free()

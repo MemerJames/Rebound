@@ -1,38 +1,21 @@
 [gd_scene format=3 uid="uid://bs2b883hr0hu8"]
 
+[ext_resource type="Script" uid="uid://jejqo34cfnjm" path="res://energy.gd" id="1_if8s4"]
 [ext_resource type="Texture2D" uid="uid://bphyf1pmp0f2c" path="res://[assets] REBOUND/Currency - Energy Powerups.png" id="1_ql0ev"]
 
-[sub_resource type="GDScript" id="GDScript_nv8nj"]
-resource_name = "res://Currencies/energy_bites.gd"
-script/source = "extends Area2D
-
-# variables
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func _on_area_entered(area: Area2D) -> void:
-	if area.name == \"player\":
-		#area.speed = area.speed * 3
-		queue_free()
-"
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l35wh"]
+size = Vector2(82, 64)
 
 [node name="Energy" type="Node2D" unique_id=1840729858]
-script = SubResource("GDScript_nv8nj")
+script = ExtResource("1_if8s4")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1264715037]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=849883133]
+position = Vector2(5, 3)
 shape = SubResource("RectangleShape2D_l35wh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=766395544]
+position = Vector2(3.9999847, 1)
+scale = Vector2(0.080000035, 0.080000035)
 texture = ExtResource("1_ql0ev")
