@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cisd4joxypi0y"]
 
-[ext_resource type="Script" uid="uid://bjsla11aoo1fj" path="res://area_2d.gd" id="1_4flbx"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_32gta"]
 
 [node name="player" type="Area2D" unique_id=651152652]
-script = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1896200225]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1499453252]
+sprite_frames = SubResource("SpriteFrames_32gta")
