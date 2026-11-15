@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Rebound"
-run/main_scene="uid://cdtmknb4g17m4"
+run/main_scene="uid://cisd4joxypi0y"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="uid://cdtmknb4g17m4"
