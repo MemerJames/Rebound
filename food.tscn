@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://otghfut6pqsf"]
 
 [ext_resource type="Texture2D" uid="uid://bcej5pvmpc6pb" path="res://[assets] REBOUND/Currency - Food.png" id="1_8txok"]
-[ext_resource type="Script" uid="uid://6mm2375mwb7o" path="res://food.gd" id="1_pohk7"]
+[ext_resource type="Script" uid="uid://on8ll4a323sy" path="res://food.gd" id="1_pohk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l35wh"]
 size = Vector2(56, 43)

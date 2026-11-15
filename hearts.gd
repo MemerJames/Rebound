@@ -1,7 +1,6 @@
 extends Node2D
 
 # variables
-var max_hearts = 5
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,5 +18,5 @@ func _process(_delta: float) -> void:
 			queue_free()
 
 func collect(player: Area2D) -> void:
-	player.health = min(player.health + 1, max_hearts)
+	player.health -= 1
 	queue_free()

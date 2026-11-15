@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c12eqddjb3oad"]
 
 [ext_resource type="Script" uid="uid://bev2yq0af6lkp" path="res://hearts.gd" id="1_3ffj4"]
-[ext_resource type="Texture2D" uid="uid://dldmai7mky2v" path="res://[assets] REBOUND/Currency - Health.png" id="1_qbydv"]
+[ext_resource type="Texture2D" uid="uid://k0f7gnuhhpwb" path="res://[assets] REBOUND/Currency - broken heart.png" id="2_3ffj4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l35wh"]
-size = Vector2(75, 57)
+size = Vector2(80, 71)
 
 [node name="Hearts" type="Node2D" unique_id=1177527582]
 script = ExtResource("1_3ffj4")
@@ -12,10 +12,10 @@ script = ExtResource("1_3ffj4")
 [node name="Area2D" type="Area2D" parent="." unique_id=1773952445]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1240032705]
-position = Vector2(13.5, 6.5)
+position = Vector2(11, 13.5)
 shape = SubResource("RectangleShape2D_l35wh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1453935496]
 position = Vector2(9.999985, 12.999985)
 scale = Vector2(0.0505, 0.0505)
-texture = ExtResource("1_qbydv")
+texture = ExtResource("2_3ffj4")

@@ -16,4 +16,5 @@ func _process(_delta: float) -> void:
 
 func collect(player: Area2D) -> void:
 	player.speedMultiplier = 1.5
+	player.jumpMultiplier = 2
 	queue_free()

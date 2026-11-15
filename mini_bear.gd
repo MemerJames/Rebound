@@ -19,7 +19,7 @@ func _process(_delta: float) -> void:
 		if global_position.y > screen_bottom:
 			queue_free()
 
-func _on_area_entered(player: Area2D) -> void:
+func collect(player: Area2D) -> void:
 	player.hunger = max_hunger
 	player.health = max_hearts
 	player.speedMulitplier = 1.5

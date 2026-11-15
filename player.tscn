@@ -16,7 +16,6 @@ script = ExtResource("1_4flbx")
 position = Vector2(17.49994, -17.50016)
 scale = Vector2(1.9999988, 1.9999988)
 shape = SubResource("RectangleShape2D_ig7tw")
-disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=533657440]
 position = Vector2(9.999999, -4.9999995)

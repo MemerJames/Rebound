@@ -2,7 +2,7 @@ extends Node2D
 
 @export var items: Array[PackedScene] = []
 @export var camera: Camera2D
-@export var spawnDistance: float = 200.0
+@export var spawnDistance: float = 500
 @export var spawnDelay: float = 1
 @export var player: Area2D
 
@@ -15,9 +15,6 @@ var spawnTimer: float = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	nextSpawn = camera.position.y + 200.0
-	
-	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
