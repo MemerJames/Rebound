@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cs0eq464p1wfl"]
+
+[ext_resource type="Script" uid="uid://b0v6i2bocaoc2" path="res://cam.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cisd4joxypi0y" path="res://player.tscn" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=2132303042]
+
+[node name="cam" type="Camera2D" parent="." unique_id=807544017 node_paths=PackedStringArray("player")]
+position = Vector2(1, -1)
+script = ExtResource("1_0xm2m")
+player = NodePath("../player")
+
+[node name="player" parent="." unique_id=651152652 instance=ExtResource("1_ig7tw")]
+position = Vector2(-2.999999, -0.99999905)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=909286292]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1140646017]
+offset_left = -772.0
+offset_top = -658.0
+offset_right = 766.0
+offset_bottom = 682.0
