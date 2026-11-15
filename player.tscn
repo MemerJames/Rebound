@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cisd4joxypi0y"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_32gta"]
+[ext_resource type="Texture2D" uid="uid://b17b33hpa7mm3" path="res://[assets] REBOUND/Bear - purple.png" id="1_4flbx"]
 
 [node name="player" type="Area2D" unique_id=651152652]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1896200225]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1499453252]
-sprite_frames = SubResource("SpriteFrames_32gta")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=533657440]
+texture = ExtResource("1_4flbx")

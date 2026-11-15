@@ -17,7 +17,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+	velocity.y += gravity
 	if not velocity.is_zero_approx():
 		var currentFriction = friction if velocity.x < 0 else friction * -1
 		velocity.x -= currentFriction
